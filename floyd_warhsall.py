@@ -9,6 +9,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 G = nx.DiGraph()
 
+G.add_nodes_from([0, 1, 2, 3])
 edges = [
     (0, 2, -2),
     (1, 2, 3),
@@ -135,7 +136,7 @@ def draw_graph_fw(
 
     if current_ijk:
         fig.suptitle(
-            f"Step {step}: Checking k={k}, i={i}, j={j}",
+            f"Step {step}: Checking  i={i}, k={k}, j={j}",
             fontsize=13,
         )
     else:
